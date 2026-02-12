@@ -48,7 +48,7 @@ jobs:
         run: flutter build windows --release
 
       - name: Compress Release
-        run: Compress-Archive -Path build\windows\runner\Release\* -DestinationPath snappath_tray_windows.zip
+        run: Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath snappath_tray_windows.zip
 
       - name: Upload Windows Build
         uses: actions/upload-artifact@v4
